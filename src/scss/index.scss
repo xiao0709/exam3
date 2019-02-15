@@ -1,0 +1,79 @@
+@import "common.scss";
+@import "_minix.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+    header {
+        width: 100%;
+        height: pxTorem(44px);
+        @include box_flex;
+        @include justify(space-between);
+        @include align;
+        padding: 0 pxTorem(10px);
+        @include sizing;
+        ul {
+            @include box_flex;
+            li {
+                width: pxTorem(60px);
+            }
+        }
+    }
+    section {
+        width: 100%;
+        @include flex;
+        overflow-y: auto;
+        .swiper-container {
+            text-align: center;
+            margin-top: pxTorem(10px);
+            img {
+                width: 100%;
+            }
+        }
+        .content {
+            width: 100%;
+            padding: 0 pxTorem(10px);
+            margin-top: pxTorem(10px);
+            @include sizing;
+            dl {
+                @include box_flex;
+                border-bottom: pxTorem(1px) #e6e6e6 solid;
+                padding-bottom: pxTorem(5px);
+                @include sizing;
+                dd {
+                    width: 55%;
+                    margin-top: pxTorem(5px);
+                    span {
+                        font-size: pxTorem(14px);
+                    }
+                    p {
+                        color: #adb8bb;
+                        margin-top: pxTorem(10px);
+                        b {
+                            margin-left: pxTorem(5px);
+                        }
+                    }
+                }
+                dt {
+                    margin-top: pxTorem(5px);
+                    margin-left: pxTorem(20px);
+                    img {
+                        width: pxTorem(100px);
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        width: 100%;
+        height: pxTorem(50px);
+        @include box_flex;
+        dl {
+            @include box_flex;
+            @include flex;
+            @include direction(column);
+            @include align;
+        }
+    }
+}
